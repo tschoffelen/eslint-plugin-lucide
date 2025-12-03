@@ -1,4 +1,4 @@
-# Disallow the use of icons without the suffix icon (`lucide/no-icon-without-suffix`)
+# Disallow the use of icons without the suffix icon (`lucide/use-icon-suffix`)
 
 🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
 

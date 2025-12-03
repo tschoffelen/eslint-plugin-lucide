@@ -31,7 +31,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "lucide/rule-name": 2
+    "lucide/use-icon-suffix": "error"
   }
 }
 ```
@@ -42,8 +42,8 @@ Then configure the rules you want to use under the rules section.
 
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 
-| Name                                                           | Description                                       | 🔧  |
-| :------------------------------------------------------------- | :------------------------------------------------ | :-- |
-| [no-icon-without-suffix](docs/rules/no-icon-without-suffix.md) | Disallow the use of icons without the suffix icon | 🔧  |
+| Name                                             | Description                                       | 🔧  |
+| :----------------------------------------------- | :------------------------------------------------ | :-- |
+| [use-icon-suffix](docs/rules/use-icon-suffix.md) | Disallow the use of icons without the suffix icon | 🔧  |
 
 <!-- end auto-generated rules list -->

@@ -7,7 +7,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/no-icon-without-suffix"),
+const rule = require("../../../lib/rules/use-icon-suffix"),
   RuleTester = require("eslint").RuleTester;
 
 //------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ const ruleTester = new RuleTester({
     sourceType: "module",
   },
 });
-ruleTester.run("no-icon-without-suffix", rule, {
+ruleTester.run("use-icon-suffix", rule, {
   valid: [
     { code: "import { BookIcon } from 'lucide-react';" },
     { code: "import { HomeIcon, UserIcon } from 'lucide-react';" },
@@ -29,14 +29,16 @@ ruleTester.run("no-icon-without-suffix", rule, {
     {
       code: "import { Book } from 'lucide-react';",
       errors: [
-        { messageId: "noIconWithoutSuffix", data: { iconName: "Book" } },
+        { messageId: "useIconSuffix", data: { name: "Book" } },
       ],
+      output: "import { BookIcon } from 'lucide-react';",
     },
     {
       code: "import { Home, UserIcon } from 'lucide-react';",
       errors: [
-        { messageId: "noIconWithoutSuffix", data: { iconName: "Home" } },
+        { messageId: "useIconSuffix", data: { name: "Home" } },
       ],
+      output: "import { HomeIcon, UserIcon } from 'lucide-react';",
     },
   ],
 });
